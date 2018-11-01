@@ -21,7 +21,7 @@ import { untilDestroyed } from "ngx-take-until-destroy";
         <input type="checkbox" [formControl]="control"/>
         <span></span>
       </label>
-      {{todo.title}}
+      {{todo.title}} | {{todo.date | date: 'dd/MM/yyyy'}}
     </div>
     <a class="btn waves-effect waves-light red btn-small btn-floating">
       <i class="material-icons" (click)="delete.emit(todo.id)">delete_forever</i>

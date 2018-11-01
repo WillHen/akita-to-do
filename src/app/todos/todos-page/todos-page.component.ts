@@ -16,6 +16,7 @@ export class TodosPageComponent implements OnInit {
     activeFilter$: Observable<VISIBILITY_FILTER>;
     selectAllDone$: Observable<boolean>;
     filters = initialFilters;
+    toDoDate: Date = new Date();
 
     constructor(
         private todosQuery: TodosQuery,
@@ -29,8 +30,9 @@ export class TodosPageComponent implements OnInit {
     }
 
     add(input: HTMLInputElement) {
-        this.todosService.add(input.value);
+        this.todosService.add(input.value, this.toDoDate);
         input.value = "";
+        this.toDoDate = new Date();
     }
 
     complete(todo: Todo) {
@@ -39,6 +41,10 @@ export class TodosPageComponent implements OnInit {
 
     delete(id: ID) {
         this.todosService.delete(id);
+    }
+
+    onToDoDateValueChange(event: Date) {
+        this.toDoDate = event;
     }
 
     changeFilter(filter: VISIBILITY_FILTER) {

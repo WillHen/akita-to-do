@@ -24,8 +24,8 @@ export class TodosService {
         });
     }
 
-    add(title: string) {
-        const todo = createTodo({ title });
+    add(title: string, date?: Date) {
+        const todo = createTodo({ title, date });
         this.todosStore.add(todo);
     }
 

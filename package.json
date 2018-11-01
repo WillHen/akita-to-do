@@ -21,8 +21,10 @@
         "@angular/platform-browser-dynamic": "^6.1.0",
         "@angular/router": "^6.1.0",
         "@datorama/akita": "^1.14.0",
+        "@ng-bootstrap/ng-bootstrap": "^4.0.0",
         "akita": "^0.5.16",
         "core-js": "^2.5.4",
+        "ngx-bootstrap": "^3.1.1",
         "ngx-take-until-destroy": "^5.2.3",
         "rxjs": "^6.2.2",
         "zone.js": "~0.8.26"
